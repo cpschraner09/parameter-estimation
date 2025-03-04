@@ -20,6 +20,7 @@ class TestSimplifiedThreePL(unittest.TestCase):
         self.experiment.add_condition(condition3, label="Cond 3")
         self.experiment.add_condition(condition4, label="Cond 4")
         self.experiment.add_condition(condition5, label="Cond 5")
+        print("DEBUG: Total conditions in experiment:", len(self.experiment.conditions))
         self.model = SimplifiedThreePL(self.experiment)
 
     def test_initialization(self):
