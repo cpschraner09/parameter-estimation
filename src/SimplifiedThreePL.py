@@ -14,8 +14,8 @@ class SimplifiedThreePL:
         self._logit_base_rate = None
         self._is_fitted = False
         self._difficulties = np.array([2, 1, 0, -1, -2])  # Fixed difficulty parameters
-        self.n_correct = sum(cond.hits + cond.correctRejections for cond in self.experiment.conditions)
-        self.n_incorrect = sum(cond.falseAlarms + cond.misses for cond in self.experiment.conditions)
+        self.n_correct = sum(cond.hits for cond in self.experiment.conditions)
+        self.n_incorrect = sum(cond.misses for cond in self.experiment.conditions)
         print(f"DEBUG: Initialized n_correct = {self.n_correct}, n_incorrect = {self.n_incorrect}")
 
     def summary(self):
