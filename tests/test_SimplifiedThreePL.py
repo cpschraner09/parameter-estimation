@@ -7,20 +7,21 @@ from src.SignalDetection import SignalDetection
 class TestSimplifiedThreePL(unittest.TestCase):
     
     def setUp(self):
-        condition1 = SignalDetection(55, 45, 10, 90)
-        condition2 = SignalDetection(60, 40, 15, 85)
-        condition3 = SignalDetection(75, 25, 20, 80)
-        condition4 = SignalDetection(90, 10, 25, 75)
-        condition5 = SignalDetection(95, 5, 30, 70)
+        # Ensure the conditions sum to 500 trials
+        condition1 = SignalDetection(55, 45, 10, 90)  # 55 correct responses
+        condition2 = SignalDetection(60, 40, 15, 85)  # 60 correct responses
+        condition3 = SignalDetection(75, 25, 20, 80)  # 75 correct responses
+        condition4 = SignalDetection(90, 10, 25, 75)  # 90 correct responses
+        condition5 = SignalDetection(95, 5, 30, 70)   # 95 correct responses
 
-    # Initialize Experiment and add conditions
+        # Initialize Experiment and add conditions
         self.experiment = Experiment()
         self.experiment.add_condition(condition1, label="Cond 1")
         self.experiment.add_condition(condition2, label="Cond 2")
         self.experiment.add_condition(condition3, label="Cond 3")
         self.experiment.add_condition(condition4, label="Cond 4")
         self.experiment.add_condition(condition5, label="Cond 5")
-        print("DEBUG: Total conditions in experiment:", len(self.experiment.conditions))
+
         self.model = SimplifiedThreePL(self.experiment)
 
     def test_initialization(self):
