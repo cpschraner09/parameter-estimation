@@ -1,3 +1,5 @@
+# code written with AI assistance
+
 import unittest
 import numpy as np
 from src.SimplifiedThreePL import SimplifiedThreePL

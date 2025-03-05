@@ -1,3 +1,5 @@
+# code written with AI assistance
+
 #!/bin/bash
 
 #changed bash file

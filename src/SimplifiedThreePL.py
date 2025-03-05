@@ -1,3 +1,5 @@
+# code written with AI assistance
+
 import numpy as np
 import scipy.optimize as opt
 from scipy.special import expit  # Standard logistic (sigmoid) function
